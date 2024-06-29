@@ -1,0 +1,3 @@
+amzn:30
+goog:40
+tsla:90
