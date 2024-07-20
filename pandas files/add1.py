@@ -49,3 +49,13 @@ print(df2)
 df3=pd.concat([df1,df2])
 # df3=pd.merge(df1,df2,on='ind1',how='right')
 print(df3)
+
+
+import numpy as np
+import pandas as pd
+#from selenium import webdriver
+import yfinance as yf
+import mplfinance as mpf
+data1=yf.download("^NSEBANK",start="2024-01-01",end="2024-07-20",interval="1h")
+print(data1)
+mpf.plot(data1)
