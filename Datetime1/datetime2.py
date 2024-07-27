@@ -52,3 +52,39 @@ print(dt4)
 
 
 #1721468001 to string
+n=1721468001
+#convet epoch to dt
+dt1=dt.datetime.fromtimestamp(n)
+#convert dt to str
+st2=dt1.strftime('%Y/%m/%d')
+print(st2)
+
+
+import calendar
+
+last_thur_2024=[]
+
+for month in range(1,13):
+    days=calendar.monthrange(2024, month)[1]
+    last_day=dt.datetime(2024,month,days)    
+    while True:
+        if last_day.weekday()==3:
+            break
+        last_day=last_day-dt.timedelta(days=1)
+    last_thur_2024.append(last_day)
+
+
+print(last_thur_2024)
+
+print(current_time)
+day_1=dt.timedelta(seconds=1)
+print(current_time+day_1)
+
+
+d1=dt.date(2024,1,1)
+
+t1=dt.time(10,10,10)
+
+print(d1,t1)
+
+dt1
