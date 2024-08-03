@@ -30,5 +30,35 @@
 
 import yfinance as yf
 
-data=yf.download(tickers='AMZN',start='2021-01-01',end='2024-06-30')
+# data=yf.download(tickers='AMZN',start='2021-01-01',end='2024-06-30')
+# print(data)
+
+#banknifty 10 year calc std of closing data
+data=yf.download(tickers='^NSEBANK',period='10y',interval='1d')
 print(data)
+
+print(data['Close'].std())
+#del Adj Close  Volume 
+
+data.rename(columns={'Open': 'open', 'High': 'high','Low':'low','Close':'close'}, inplace=True)
+print(data)
+
+data.drop(['Adj Close','Volume'],axis=1,inplace=True)
+print(data)
+
+
+min_data=yf.download(tickers='^NSEBANK',interval='15m',start='2024-06-15',end='2024-07-15')
+print(min_data)
+
+
+
+# # Resample to 5-minute intervals
+# resampled_df = min_data.resample('15T').agg({
+#     'Open': 'first',
+#     'High': 'max',
+#     'Low': 'min',
+#     'Close': 'last',
+#     'Volume': 'sum'
+# })
+
+# print(resampled_df)
