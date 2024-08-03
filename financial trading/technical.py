@@ -65,3 +65,15 @@ print(df2)
 
 new_df=pd.concat([df1, df2])
 print(new_df)
+
+new_df=new_df.drop(['Adj Close','Volume'],axis=1)
+print(new_df)
+
+new_df['avg']=(new_df['Open']+new_df['High']+new_df['Low']+new_df['Close'])/4
+print(new_df)
+
+
+
+t_object=Ticker('RELIANCE.NS')
+
+print(t_object.balance_sheet)
