@@ -1,28 +1,58 @@
 
 
-import yfinance as yf
-
-
-# d=yf.download(tickers='MSFT',period='1mo')
-# d=yf.download('MSFT',period='1mo')
-# d=yf.download(tickers='MSFT',start='2024-01-01',end='2024-02-01')
-d=yf.download('MSFT','2024-01-01','2024-02-01')
-print(d)
-
-# t=yf.Ticker()
 
 
 
-def abc(a:list,b:str,c=0)-> list:
-    """
-    a(number 1): int
-    b(number 2): int
-    c:optional parameter default is 0
-    """
-    b=b.upper()
-    a.append(b)
-    return a
 
 
-ans=abc(a=[1],b='y')
-print(ans)
+
+# def sum_two_value(n1:int,n2:int,d=0) -> int:
+#     """
+#     n1:number 1
+#     n2:number 2
+#     d:default value which is 0
+#     """
+#     sum1=n1+n2
+#     return sum1
+
+# # sum_two_value()
+
+# l=len([1,2,3])
+# print(l)
+# s='hello'
+# # s.replace()
+
+# import pandas as pd
+
+# pd.DataFrame()
+
+# import random as rd
+
+# r=rd.randint(a=10,b=100)
+# r=rd.randint(b=10,a=100)
+# print(r)
+
+
+# import yfinance as yf
+
+
+# yf.download()
+
+
+# t=yf.Ticker(ticker='TSLA')
+# print(t.option_chain())
+
+
+
+# import yfinance 
+# yfinance.download('TSLA',period='1mo')
+
+# import yfinance as yf
+# yf.download('AMZN',period='1mo')
+
+# from yfinance import download,Ticker
+from yfinance import *
+
+download('GOOG',period='1mo')
+
+Ticker('TSLA')
