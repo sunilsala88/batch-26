@@ -52,7 +52,16 @@
 
 # from yfinance import download,Ticker
 from yfinance import *
+import pandas as pd
+# download('GOOG',period='1mo')
 
-download('GOOG',period='1mo')
+# Ticker('TSLA')
 
-Ticker('TSLA')
+df1=download(tickers='TSLA',start='2024-01-01',end='2024-01-31')
+df2=download(tickers='TSLA',start='2024-02-01',end='2024-02-28')
+print(df1)
+print(df2)
+
+
+new_df=pd.concat([df1, df2])
+print(new_df)
