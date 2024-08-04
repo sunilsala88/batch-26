@@ -13,7 +13,8 @@
 from finvizfinance.screener.overview import Overview
 
 foverview = Overview()
-filters_dict = {'Index':'S&P 500','Sector':'Technology',"Market Cap.":'Mega ($200bln and more)'}
+# filters_dict = {'Index':'S&P 500','Sector':'Technology',"Market Cap.":'Mega ($200bln and more)','Target Price':"50% Above Price"}
+filters_dict = {"P/E":'High (>50)'}
 foverview.set_filter(filters_dict=filters_dict)
 df = foverview.screener_view()
 print(df)
