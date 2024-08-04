@@ -8,14 +8,24 @@ import yfinance as yf
 # data=yf.download(tickers="TSLA",period='1mo')
 # print(data)
 
-t=yf.Ticker(ticker='GOOG')
-# print(t.info.get('beta'))
+t=yf.Ticker(ticker='TSLA')
+print(t.info.get('beta'))
 # print(t.news)
-import pandas as pd
+# import pandas as pd
 
-df=pd.DataFrame(t.get_news())
-print(df)
+# df=pd.DataFrame(t.get_news())
+# print(df)
 
-df.to_csv('demo1.csv')
+# df.to_csv('demo1.csv')
 
 #beta of dow jones
+
+
+# #income
+# print(t.get_incomestmt())
+
+# #balance
+# print(t.quarterly_balance_sheet)
+
+# #cash
+# print(t.get_cashflow())
