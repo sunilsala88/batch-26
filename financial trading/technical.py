@@ -6,16 +6,16 @@
 
 
 
-# def sum_two_value(n1:int,n2:int,d=0) -> int:
-#     """
-#     n1:number 1
-#     n2:number 2
-#     d:default value which is 0
-#     """
-#     sum1=n1+n2
-#     return sum1
+def sum_two_value(n1:int,n2:int,d=0) -> int:
+    """
+    n1:number 1
+    n2:number 2
+    d:default value which is 0
+    """
+    sum1=n1+n2
+    return sum1
 
-# # sum_two_value()
+sum_two_value()
 
 # l=len([1,2,3])
 # print(l)
